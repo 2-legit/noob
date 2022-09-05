@@ -31,7 +31,7 @@ end)
 
 MovementSection:NewToggle("Speed", "Speed", function(state)
     if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 26
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
     else
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
@@ -39,7 +39,7 @@ end)
 
 MovementSection:NewButton("Longjump", "Longjump", function()
     game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-    game.Workspace.Gravity = 5
+    game.Workspace.Gravity = 10
     wait(2.5)
     game.Workspace.Gravity = 196
 end)
@@ -69,7 +69,7 @@ local MechanicsSection = Mechanics:NewSection("General")
 
 MechanicsSection:NewToggle("Low Gravity", "makes gravity low", function(state)
     if state then
-        game.Workspace.Gravity = 5
+        game.Workspace.Gravity = 10
     else
         game.Workspace.Gravity = 196
     end
