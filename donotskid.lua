@@ -36,7 +36,7 @@ end)
 
 MovementSection:NewToggle("Speed", "Speed", function(state)
     if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
     else
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
