@@ -7,7 +7,7 @@ local Combat = Window:NewTab("Combat")
 
 local CombatSection = Combat:NewSection("General")
 
-CombatSection:NewButton("AntiAura", "makes it harder to hit you", function()
+CombatSection:NewButton("AntiAura(CANT TURN OFF!!!)", "makes it harder to hit you", function()
     while true do
         wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
@@ -38,3 +38,9 @@ MovementSection:NewToggle("Speed", "Speed", function(state)
 end)
 
 local Mechanics = Window:NewTab("Mechanics")
+
+local MechanicsSection = Mechanics:NewSection("General")
+
+MechanicsSection:NewSlider("Gravity", "SliderInfo", 500, 10, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Worspace.Gravity = s
+end)
