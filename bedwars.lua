@@ -1,5 +1,4 @@
 --noboline remake
-local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Noboline 2.0(github edition)(your retarded)(real)", "Ocean")
 
@@ -24,16 +23,6 @@ CombatSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function(
 game:GetService("ReplicatedStorage"):FindFirstChild("events-@easy-games/game-core:shared/game-core-networking@getEvents.Events").useAbility:FireServer(unpack(args))
 end)
 
-CombatSection:NewToggle("Velocity","Reduces knockback taken",function(state)
-if state then
-		KnockbackTable["kbDirectionStrength"] = 0
-		KnockbackTable["kbUpwardStrength"] = 0
-	else
-		KnockbackTable["kbDirectionStrength"] = 100
-		KnockbackTable["kbUpwardStrength"] = 100
-	end
-end)
-
 CombatSection:NewToggle("No Fall", "Prevents taking fall ", function(callback)
     local nofall = true
     if callback then
@@ -50,6 +39,38 @@ CombatSection:NewToggle("No Fall", "Prevents taking fall ", function(callback)
             end
     else
         local nofall = false
+    end
+end)
+
+CombatSection:NewToggle("killaura", "test", function(state)
+    if state then
+        local player = game:GetService("Players")
+local lplr = player.LocalPlayer
+local cam = workspace.CurrentCamera
+local KnitClient = debug.getupvalue(require(lplr.PlayerScripts.TS.knit).setup, 6)
+local SwordCont = KnitClient.Controllers.SwordController
+
+local aura = false
+local DistVal = {["Value"] = 14}
+function Aura()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Character and v.Name ~= game.Players.LocalPlayer.Name and v.Character:FindFirstChild("HumanoidRootPart") then
+            local mag = (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            if mag <= DistVal["Value"] and v.Team ~= game.Players.LocalPlayer.Team and v.Character:FindFirstChild("Humanoid") then
+                if v.Character.Humanoid.Health > 0 then
+                    aura = true
+                    SwordCont:swingSwordAtMouse()
+end
+end
+end
+end
+end
+
+game:GetService("RunService").Stepped:connect(function()
+Aura()
+end)
+    else
+        print("lol")
     end
 end)
 
