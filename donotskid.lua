@@ -69,7 +69,7 @@ local MechanicsSection = Mechanics:NewSection("General")
 
 MechanicsSection:NewToggle("Low Gravity", "makes gravity low", function(state)
     if state then
-        game.Workspace.Gravity = 40
+        game.Workspace.Gravity = 15
     else
         game.Workspace.Gravity = 196
     end
