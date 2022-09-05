@@ -100,6 +100,36 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -100, 0)
 end)
 
+MechanicsSection:NewButton("chatspammer/autotoxic", "ezezez", function()
+    while true do
+        wait(5)
+        for i, player in ipairs(game.Players:GetChildren()) do
+    local function chat(msg)
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
+    end
+    
+    chat("no noboline?")
+    wait(2.5)
+    chat("vxpe is for babys")
+    wait(2.5)
+    chat("shut up your bad")
+    wait(2.5)
+    chat("why you? idc")
+    wait(2.5)
+    chat("hey guys its me flying gorilla")
+    chat("sponsored by edp455")
+    wait(2.5)
+    chat(".gg/noboline")
+    wait(2.5)
+    chat("send me feet pics")
+    wait(2.5)
+    chat("real gamers")
+    wait(2.5)
+    chat("LOL")
+     end
+    end
+end)
+
 MechanicsSection:NewKeybind("RightShift", "RightShift", Enum.KeyCode.RightShift, function()
 	Library:ToggleUI()
 end)
