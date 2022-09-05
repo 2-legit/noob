@@ -70,12 +70,8 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
 end)
 
-MovementSection:NewToggle("Speed", "Speed", function(state)
-    if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 55
-    else
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end
+MovementSection:NewKeybind("Speed", "speeds up", Enum.KeyCode.K, function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
 end)
 
 MovementSection:NewKeybind("undermap script", "go under map", Enum.KeyCode.U, function()
