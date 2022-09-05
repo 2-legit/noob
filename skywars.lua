@@ -86,6 +86,12 @@ MechanicsSection:NewToggle("High Gravity", "makes gravity higher", function(stat
     end
 end)
 
+MechanicsSection:NewButton("ForceKill", "23423424", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -7, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -100, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -100, 0)
+end)
+
 MechanicsSection:NewKeybind("RightShift", "RightShift", Enum.KeyCode.RightShift, function()
 	Library:ToggleUI()
 end)
