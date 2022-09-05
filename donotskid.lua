@@ -1,7 +1,7 @@
 --noboline remake
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noboline 2.0", "Ocean")
+local Window = Library.CreateLib("Noboline 2.0(github edition)(your retarded)(reeal)", "Ocean")
 
 local Combat = Window:NewTab("Combat")
 
