@@ -1,2 +1,2 @@
-# noobbedwarscheat
-cheat
+# 3kBNwofewm
+cheats
