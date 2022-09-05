@@ -39,7 +39,9 @@ end)
 
 MovementSection:NewButton("Longjump", "Longjump", function()
     game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-    game.Workspace.Gravity = 5
+    game.Workspace.Gravity = 10
+    wait(2.5)
+    game.Workspace.Gravity = 196
 end)
 
 MovementSection:NewButton("HighJump", "makes u jump high", function()
