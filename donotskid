@@ -1,0 +1,40 @@
+--noboline remake
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Noboline 2.0", "Ocean")
+
+local Combat = Window:NewTab("Combat")
+
+local CombatSection = Combat:NewSection("General")
+
+CombatSection:NewButton("AntiAura", "makes it harder to hit you", function()
+    while true do
+        wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
+    end
+end)
+
+local Movement = Window:NewTab("Movement")
+
+local MovementSection = Movement:NewSection("General")
+
+MovementSection:NewToggle("Fly", "Flysss", function(state)
+    if state then
+        game.Workspace.Gravity = 0
+    else
+        game.Workspace.Gravity = 196
+    end
+end)
+
+
+MovementSection:NewToggle("Speed", "Speed", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+local Mechanics = Window:NewTab("Mechanics")
