@@ -1,3 +1,34 @@
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local edp = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextLabel.Position = UDim2.new(0.0865026116, 0, 0.0610972568, 0)
+TextLabel.Size = UDim2.new(0, 1, 0, 10)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Noboline"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 57.000
+
+edp.Name = "edp"
+edp.Parent = ScreenGui
+edp.Active = true
+edp.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+edp.Position = UDim2.new(0.856077552, 0, -0.00124686398, 0)
+edp.Size = UDim2.new(0, 203, 0, 305)
+edp.Font = Enum.Font.SourceSans
+edp.Text = "sponsored by edp445, slo#9999\\n, Xzyn#8635, and Vinny.#0001"
+edp.TextColor3 = Color3.fromRGB(0, 0, 0)
+edp.TextScaled = true
+edp.TextSize = 36.000
+edp.TextWrapped = true
+
 --noboline remake
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
