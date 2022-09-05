@@ -28,6 +28,11 @@ MovementSection:NewToggle("Fly", "Flysss", function(state)
     end
 end)
 
+MovementSection:NewKeybind("Fly", "R", Enum.KeyCode.R, function()
+	game.Workspace.Gravity = 0
+    wait(2.5)
+    game.Workspace.Gravity = 196
+end)
 
 MovementSection:NewToggle("Speed", "Speed", function(state)
     if state then
@@ -100,4 +105,8 @@ MechanicsSection:NewButton("Nofall", "no fall damage", function()
     else
         local nofall = false
     end
+end)
+
+MechanicsSection:NewKeybind("RightShift", "RightShift", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
 end)
