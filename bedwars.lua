@@ -94,6 +94,12 @@ MechanicsSection:NewButton("Nofall", "no fall damage", function()
     end
 end)
 
+MechanicsSection:NewButton("underground thing works 50% of time lol", "23423424", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -7, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -100, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -100, 0)
+end)
+
 MechanicsSection:NewKeybind("RightShift", "RightShift", Enum.KeyCode.RightShift, function()
 	Library:ToggleUI()
 end)
