@@ -15,6 +15,26 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
     end
 end)
 
+CombatSection:NewButton("AutoClicker(V-KEY)", "lel", function()
+    local time = 0.001 --decrease if too slow increase if too fast
+
+click = false
+m = game.Players.LocalPlayer:GetMouse()
+m.KeyDown:connect(function(key)
+if key == "v" then
+if click == true then click = false
+elseif
+click == false then click = true
+
+while click == true do 
+wait(time)
+mouse1click()
+end
+end
+end
+end)
+end)
+
 local Movement = Window:NewTab("Movement")
 
 local MovementSection = Movement:NewSection("General")
