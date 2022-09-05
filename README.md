@@ -1,2 +1,1 @@
-# 3kBNwofewm
-cheats
+*1# game script (totallyyy)
