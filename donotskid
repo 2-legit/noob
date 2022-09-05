@@ -37,10 +37,48 @@ MovementSection:NewToggle("Speed", "Speed", function(state)
     end
 end)
 
+MovementSection:NewButton("Longjump", "Longjump", function()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    game.Workspace.Gravity = 10
+	wait(3.5)
+	game.Workspace.Gravity = 196
+end)
+
+MovementSection:NewButton("HighJump", "makes u jump high", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 3, 0)
+wait(0.1)
+end)
+
 local Mechanics = Window:NewTab("Mechanics")
 
 local MechanicsSection = Mechanics:NewSection("General")
 
-MechanicsSection:NewSlider("Gravity", "SliderInfo", 500, 10, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Worspace.Gravity = s
+MechanicsSection:NewToggle("Low Gravity", "makes gravity low", function(state)
+    if state then
+        game.Workspace.Gravity = 40
+    else
+        game.Workspace.Gravity = 196
+    end
+end)
+
+MechanicsSection:NewToggle("High Gravity", "makes gravity higher", function(state)
+    if state then
+        game.Workspace.Gravity = 500
+    else
+        game.Workspace.Gravity = 196
+    end
 end)
