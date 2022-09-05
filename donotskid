@@ -11,7 +11,7 @@ local Combat = Window:NewTab("Combat")
 
 local CombatSection = Combat:NewSection("General")
 
-CombatSection:NewButton("AntiAura (cant disable!)", "makes it harder to hit you", function()
+CombatSection:NewButton("AntiHit (cant disable!)", "makes it harder to hit you", function()
     while true do
         wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
