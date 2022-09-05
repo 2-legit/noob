@@ -16,7 +16,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
     end
 end)
 
-CombatSection:NewKeybind("DinoExploit", "stuff", Enum.KeyCode.P, function()
+CombatSection:NewKeybind("DinoExploit", "stuff", Enum.KeyCode.F3, function()
 	local args = {
     [1] = "dino_charge"
 }
