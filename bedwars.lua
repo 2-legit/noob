@@ -1,5 +1,5 @@
 --noboline remake
-
+local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Noboline 2.0(github edition)(your retarded)(real)", "Ocean")
 
@@ -13,6 +13,43 @@ CombatSection:NewButton("AntiAura(CANT TURN OFF!!!)", "makes it harder to hit yo
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
+    end
+end)
+
+CombatSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	local args = {
+    [1] = "dino_charge"
+}
+
+game:GetService("ReplicatedStorage"):FindFirstChild("events-@easy-games/game-core:shared/game-core-networking@getEvents.Events").useAbility:FireServer(unpack(args))
+end)
+
+CombatSection:NewToggle("Velocity","Reduces knockback taken",function(state)
+if state then
+		KnockbackTable["kbDirectionStrength"] = 0
+		KnockbackTable["kbUpwardStrength"] = 0
+	else
+		KnockbackTable["kbDirectionStrength"] = 100
+		KnockbackTable["kbUpwardStrength"] = 100
+	end
+end)
+
+CombatSection:NewToggle("No Fall", "Prevents taking fall ", function(callback)
+    local nofall = true
+    if callback then
+        if nofall then
+            spawn(function()
+                repeat
+                    wait()
+                    if nofall == false then
+                        return end
+
+                        game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.GroundHit:FireServer()
+                    until nofall == false
+                end)
+            end
+    else
+        local nofall = false
     end
 end)
 
@@ -72,25 +109,6 @@ MechanicsSection:NewToggle("High Gravity", "makes gravity higher", function(stat
         game.Workspace.Gravity = 500
     else
         game.Workspace.Gravity = 196
-    end
-end)
-
-MechanicsSection:NewButton("Nofall", "no fall damage", function()
-    local nofall = true
-    if callback then
-        if nofall then
-            spawn(function()
-                repeat
-                    wait()
-                    if nofall == false then
-                        return end
-
-                        game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.GroundHit:FireServer()
-                    until nofall == false
-                end)
-            end
-    else
-        local nofall = false
     end
 end)
 
