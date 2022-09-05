@@ -1,6 +1,7 @@
 local ScreenGui = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 local edp = Instance.new("TextLabel")
+local N = Instance.new("TextLabel")
 
 --Properties:
 
@@ -9,10 +10,10 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 TextLabel.Parent = ScreenGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextLabel.Position = UDim2.new(0.0865026116, 0, 0.0610972568, 0)
-TextLabel.Size = UDim2.new(0, 1, 0, 10)
+TextLabel.Position = UDim2.new(0.101764232, 0, 0.417092294, 0)
+TextLabel.Size = UDim2.new(0, 5, 0, 11)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Noboline"
+TextLabel.Text = "oboline"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 57.000
 
@@ -23,11 +24,22 @@ edp.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 edp.Position = UDim2.new(0.856077552, 0, -0.00124686398, 0)
 edp.Size = UDim2.new(0, 203, 0, 305)
 edp.Font = Enum.Font.SourceSans
-edp.Text = "sponsored by edp445, slo#9999\\n, Xzyn#8635, and Vinny.#0001"
+edp.Text = "sponsored by edp455, slo#9999\\n, Xzyn#8635, and Vinny.#0001"
 edp.TextColor3 = Color3.fromRGB(0, 0, 0)
 edp.TextScaled = true
 edp.TextSize = 36.000
 edp.TextWrapped = true
+
+N.Name = "N"
+N.Parent = ScreenGui
+N.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+N.Position = UDim2.new(0.0414244458, 0, 0.441814184, 0)
+N.Size = UDim2.new(0, 6, 0, 0)
+N.Font = Enum.Font.SourceSans
+N.Text = "N"
+N.TextColor3 = Color3.fromRGB(94, 33, 132)
+N.TextSize = 100.000
+N.TextStrokeColor3 = Color3.fromRGB(137, 71, 202)
 
 --noboline remake
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
