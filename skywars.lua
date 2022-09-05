@@ -52,7 +52,7 @@ end)
 
 MovementSection:NewToggle("Speed", "Speed", function(state)
     if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 55
     else
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
@@ -72,7 +72,7 @@ local MechanicsSection = Mechanics:NewSection("General")
 
 MechanicsSection:NewToggle("Low Gravity", "makes gravity low", function(state)
     if state then
-        game.Workspace.Gravity = 40
+        game.Workspace.Gravity = 10
     else
         game.Workspace.Gravity = 196
     end
