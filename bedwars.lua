@@ -349,6 +349,6 @@ runcode(function()
     end)
 end)
 
-MechanicsSection:NewKeybind("RightShift", "RightShift", Enum.KeyCode.RightShift, function()
+MechanicsSection:NewKeybind("Open GUI", "RightShift", Enum.KeyCode.RightShift, function()
 	Library:ToggleUI()
 end)
