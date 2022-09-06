@@ -44,7 +44,7 @@ N.TextStrokeColor3 = Color3.fromRGB(137, 71, 202)
 --noboline remake
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noboline V.1", "Ocean")
+local Window = Library.CreateLib("Noboline V 1.1", "Ocean")
 
 local Combat = Window:NewTab("Combat")
 
@@ -180,15 +180,6 @@ MovementSection:NewKeybind("SpeedBoost", "speed", Enum.KeyCode.Z, function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 115
     wait(0.1)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-end)
-
-MovementSection:NewButton("BHop", "ButtonInfo", function()
-        while true do
-            game.Workspace.Gravity = 50
-            game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-            wait(1)
-            game.Workspace.Gravity = 196
-        end
 end)
 
 local Mechanics = Window:NewTab("Mechanics")
