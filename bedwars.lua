@@ -182,6 +182,16 @@ MovementSection:NewKeybind("SpeedBoost", "speed", Enum.KeyCode.Z, function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 
+MovementSection:NewButton("BHop", "ButtonInfo", function()
+        while true do
+            wait(2)
+            game.Workspace.Gravity = 50
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(1)
+            game.Workspace.Gravity = 196
+        end
+end)
+
 local Mechanics = Window:NewTab("Mechanics")
 
 local MechanicsSection = Mechanics:NewSection("General")
