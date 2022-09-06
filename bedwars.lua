@@ -170,16 +170,10 @@ end)
 MovementSection:NewButton("HeetSeeker(ForNoobs)", "speeds u up", function()
     while true do
         wait(0.5)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 74
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
     wait(0.1)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
     end
-end)
-
-MovementSection:NewKeybind("SpeedBoost", "speed", Enum.KeyCode.Z, function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 115
-    wait(0.1)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 
 local Mechanics = Window:NewTab("Mechanics")
