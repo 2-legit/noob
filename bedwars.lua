@@ -167,6 +167,15 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
 end)
 
+MovementSection:NewButton("HeetSeeker(ForNoobs)", "speeds u up", function()
+    while true do
+        wait(0.5)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 74
+    wait(0.1)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
 local Mechanics = Window:NewTab("Mechanics")
 
 local MechanicsSection = Mechanics:NewSection("General")
