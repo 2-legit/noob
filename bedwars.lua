@@ -184,7 +184,6 @@ end)
 
 MovementSection:NewButton("BHop", "ButtonInfo", function()
         while true do
-            wait(2)
             game.Workspace.Gravity = 50
             game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
             wait(1)
