@@ -1,3 +1,5 @@
+-- .gg/noboline
+
 local ScreenGui = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 local edp = Instance.new("TextLabel")
@@ -22,12 +24,12 @@ edp.Parent = ScreenGui
 edp.Active = true
 edp.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 edp.Position = UDim2.new(0.856077552, 0, -0.00124686398, 0)
-edp.Size = UDim2.new(0, 203, 0, 305)
+edp.Size = UDim2.new(0, 100, 0, 305)
 edp.Font = Enum.Font.SourceSans
 edp.Text = "sponsored by edp455, slo#9999\\n, Xzyn#8635, and Vinny.#0001"
 edp.TextColor3 = Color3.fromRGB(0, 0, 0)
 edp.TextScaled = true
-edp.TextSize = 36.000
+edp.TextSize = 26.000
 edp.TextWrapped = true
 
 N.Name = "N"
@@ -170,7 +172,7 @@ end)
 MovementSection:NewButton("HeetSeeker(ForNoobs)", "speeds u up", function()
     while true do
         wait(0.5)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
     wait(0.1)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
     end
