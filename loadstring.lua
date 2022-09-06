@@ -1,4 +1,2 @@
-loadstring(game:HttpGet"https://raw.githubusercontent.com/VinnyPrograming/noobbedwarscheat/main/bedwars.lua")()
-loadstring(game:HttpGet"https://raw.githubusercontent.com/VinnyPrograming/noobbedwarscheat/main/skywars.lua")()
-loadstring(game:HttpGet"https://raw.githubusercontent.com/VinnyPrograming/noobbedwarscheat/main/arsenal.lua")()
-loadstring(game:HttpGet"https://raw.githubusercontent.com/VinnyPrograming/noobbedwarscheat/main/anygame.lua")()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/VinnyPrograming/noboline/main/bedwars.lua")()
+
