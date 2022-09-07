@@ -46,7 +46,7 @@ N.TextStrokeColor3 = Color3.fromRGB(137, 71, 202)
 --noboline remake
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noboline V 1.1 (discord.gg/noboline)", "Ocean")
+local Window = Library.CreateLib("Noboline V 2.0 (discord.gg/noboline)", "Ocean")
 
 local Combat = Window:NewTab("Combat")
 
