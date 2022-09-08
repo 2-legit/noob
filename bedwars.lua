@@ -1,8 +1,9 @@
 -- .gg/noboline
---noboline remake
+--noboline bedwars
+
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noboline V 2.0 (discord.gg/noboline)", "Ocean")
+local Window = Library.CreateLib("Noboline V 1.1 (discord.gg/noboline)", "Ocean")
 
 local Combat = Window:NewTab("Combat")
 
@@ -25,7 +26,7 @@ CombatSection:NewKeybind("DinoExploit", "stuff", Enum.KeyCode.F3, function()
 game:GetService("ReplicatedStorage"):FindFirstChild("events-@easy-games/game-core:shared/game-core-networking@getEvents.Events").useAbility:FireServer(unpack(args))
 end)
 
-CombatSection:NewToggle("No Fall(Xyzn)", "Prevents taking fall ", function(callback)
+CombatSection:NewToggle("No Fall", "Prevents taking fall ", function(callback)
     local nofall = true
     if callback then
         if nofall then
@@ -44,7 +45,7 @@ CombatSection:NewToggle("No Fall(Xyzn)", "Prevents taking fall ", function(callb
     end
 end)
 
-CombatSection:NewToggle("Velocity(Xyzn)","Reduces knockback taken",function(state)
+CombatSection:NewToggle("Velocity","Reduces knockback taken",function(state)
 if state then
 		KnockbackTable["kbDirectionStrength"] = 0
 		KnockbackTable["kbUpwardStrength"] = 0
@@ -54,7 +55,7 @@ if state then
 	end
 end)
 
-CombatSection:NewToggle("killaura(Xzyn)", "test", function(state)
+CombatSection:NewToggle("killaura", "test", function(state)
     if state then
         local player = game:GetService("Players")
 local lplr = player.LocalPlayer
@@ -103,7 +104,34 @@ end)
 MovementSection:NewKeybind("Longjump", "longer jump", Enum.KeyCode.J, function()
 	game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
     game.Workspace.Gravity = 15
-    wait(2.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.4
+wait(0.5)
     game.Workspace.Gravity = 196
 end)
 
@@ -123,6 +151,9 @@ wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
+game.Workspace.Gravity = 15
+wait(1)
+game.Workspace.Gravity = 196
 end)
 
 MovementSection:NewButton("HeetSeeker(ForNoobs)", "speeds u up", function()
@@ -181,7 +212,7 @@ MechanicsSection:NewButton("chatspammer/autotoxic", "ezezez", function()
     wait(2.5)
     chat(".gg/noboline")
     wait(2.5)
-    chat("feet pics pls")
+    chat("fee**t pics pls")
     wait(2.5)
     chat("real gamers")
     wait(2.5)
@@ -190,7 +221,7 @@ MechanicsSection:NewButton("chatspammer/autotoxic", "ezezez", function()
     end
 end)
 
-CombatSection:NewToggle("Esp Box(Xzyn)","Opens Box esp",function()
+CombatSection:NewToggle("Esp Box","Opens Box esp",function()
 local Player = game:GetService("Players").LocalPlayer
 local Camera = game:GetService("Workspace").CurrentCamera
 local Mouse = Player:GetMouse()
