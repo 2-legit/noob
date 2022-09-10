@@ -91,7 +91,10 @@ local Movement = Window:NewTab("Movement")
 local MovementSection = Movement:NewSection("General")
 
 MovementSection:NewKeybind("Fly", "R", Enum.KeyCode.R, function()
-	game.Workspace.Gravity = 0
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+    wait(0.7)
+    game.Workspace.Gravity = 0
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
@@ -248,11 +251,10 @@ MechanicsSection:NewButton("chatspammer/autotoxic", "ezezez", function()
     end
 end)
 
-CombatSection:NewToggle("Esp Box","Opens Box esp",function()
+MechanicsSection:NewToggle("Esp Box","Opens Box esp",function()
 local Player = game:GetService("Players").LocalPlayer
 local Camera = game:GetService("Workspace").CurrentCamera
 local Mouse = Player:GetMouse()
-
 local function Dist(pointA, pointB)
     return math.sqrt(math.pow(pointA.X - pointB.X, 2) + math.pow(pointA.Y - pointB.Y, 2))
 end
