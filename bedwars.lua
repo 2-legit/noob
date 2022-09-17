@@ -158,12 +158,21 @@ wait(1)
 game.Workspace.Gravity = 196
 end)
 
-MovementSection:NewButton("HeetSeeker(ForNoobs)", "speeds u up", function()
+MovementSection:NewButton("HeetSeeker(low ping)", "speeds u up", function()
     while true do
         wait(0.5)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
     wait(0.1)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+    end
+end)
+
+MovementSection:NewButton("HeetSeeker(High Ping)", "speeds u up", function()
+    while true do
+        wait(0.5)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 74
+    wait(0.1)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
 end)
 
