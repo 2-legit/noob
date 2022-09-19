@@ -19,7 +19,7 @@ function boxnotify(text)
      end
 end
 
-notify("Spring V2 Loaded...!")
+notify("Dino X Loaded..!")
 
 local GravityFly = LIB("Blatant", {
     Name = "GravityFly",
@@ -32,47 +32,6 @@ local GravityFly = LIB("Blatant", {
     end,
     Default = false,
     HoverText = "gravity 0 :troll:"
-})
-
-local FlyV2 = LIB("Blatant", {
-    Name = "FlyV2",
-    Function = function(callback) 
-        if callback then
-			game.Workspace.Gravity = 0
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			wait(0.3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45           
-			wait(0.7)
-			game.Workspace.Gravity = 196
-        end
-    end,
-    Default = false,
-    HoverText = "Different Fly lmao"
 })
 
 local LongJump2 = LIB("Blatant", {
@@ -201,7 +160,7 @@ bv:remove()
 wait(.4)
 bpfwd:remove()
         else
-			pring("cope")   
+			print("cope")   
 		end
     end,
     Default = false,
@@ -245,4 +204,138 @@ lplr.Character = clone
     end,
     Default = false,
     HoverText = "this was old ac bypass lol"
+})
+
+local PurpleSkyBox = LIB("Render", {
+    Name = "PurpleSkyBox",
+    Function = function(callback) 
+        if callback then
+			game.Lighting.Sky.SkyboxBk = "rbxassetid://6847661057"
+            game.Lighting.Sky.SkyboxDn = "rbxassetid://6847661380"
+            game.Lighting.Sky.SkyboxFt = "rbxassetid://6847661671"
+            game.Lighting.Sky.SkyboxLf = "rbxassetid://6847661950"
+            game.Lighting.Sky.SkyboxRt = "rbxassetid://6847665479"
+            game.Lighting.Sky.SkyboxUp = "rbxassetid://6847663751"
+        else
+            print("cope")
+	    end
+    end,
+    Default = false,
+    HoverText = "this was old ac bypass lol"
+})
+
+local AmazingLigthing = LIB("Render", {
+    Name = "AmazingLigthing",
+    Function = function(callback) 
+        if callback then
+         --[[
+	
+	Graphics (+) - ItsPlasmaRBLX.
+	
+--]]
+
+--//# Script runs ingame!
+local Lighting = game:GetService("Lighting");
+local TerrainService = game:GetService("Workspace").Terrain
+
+local Enabled = true
+
+local TerrainPlusEnabled = false
+local BetterLightingEnabled = true
+
+--//# Lighting Setup
+
+function SetupLighting_()
+	
+	local ColorCorrection = Instance.new("ColorCorrectionEffect")
+	local SunRays = Instance.new("SunRaysEffect")
+	local Blur = Instance.new("BlurEffect")
+	
+	local Sky = Instance.new("Sky")
+	local Atmosphere = Instance.new("Atmosphere")
+	local Clouds = Instance.new("Clouds")
+	
+	--// Remove all post effects.
+	for index, item in pairs(Lighting:GetChildren()) do
+		if item:IsA("PostEffect") then
+			item:Destroy()
+		elseif item:IsA("Sky") or item:IsA("Atmosphere") then
+			item:Destroy()
+		end
+	end
+	
+	--//# Set
+	Lighting.Brightness = 1
+	Lighting.EnvironmentDiffuseScale = .2
+	Lighting.EnvironmentSpecularScale = .82
+	SunRays.Parent = Lighting
+	Atmosphere.Parent = Lighting
+	Sky.Parent = Lighting
+	Blur.Size = 3.921
+	Blur.Parent = Lighting
+	ColorCorrection.Parent = Lighting
+	ColorCorrection.Saturation = .092
+	
+	Clouds.Parent = TerrainService
+	Clouds.Cover = .4;
+end
+
+--//# Terrain Setup
+function SetupTerrain()
+	local Terrain = game.Workspace.Terrain;
+	Terrain.WaterTransparency = 1
+	Terrain.WaterReflectance = 1
+end
+
+if Enabled then
+	if TerrainPlusEnabled then
+		SetupTerrain()
+	end
+	if BetterLightingEnabled then
+		SetupLighting_()
+	end
+elseif not Enabled then
+	error("Script Disabled.")
+	return false
+end
+
+--|| Setting Script Parent! ||--
+script.Parent = game:GetService("ServerScriptService")
+        end
+    end,
+    Default = false,
+    HoverText = "Graphics"
+})
+
+local InfiniteJump = LIB("Blatant", {
+    Name = "Infinite Jump",
+    Function = function(callback) 
+        if callback then
+			local InfiniteJumpEnabled = true
+			game:GetService("UserInputService").JumpRequest:connect(function()
+			if InfiniteJumpEnabled then
+				game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+			end
+		end)
+        end
+    end,
+    Default = false,
+    HoverText = "Infinite jumps you retard"
+})
+
+local OldLongJump = LIB("Blatant", {
+    Name = "OldLongJump",
+    Function = function(callback) 
+        if callback then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.5)
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.5)
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        else
+            print("cope")
+	    end
+    end,
+    Default = false,
+    HoverText = "old long jump B)"
 })
