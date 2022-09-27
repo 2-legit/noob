@@ -1,14 +1,22 @@
---noboline bedwars
+--public noboline
 
 local KnockbackTable = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noboline V 1.1 (discord.gg/noboline)", "Ocean")
-
+local Window = Library.CreateLib("Noboline v1.8 (discord.gg/noboline)", "Ocean")
+game.StarterGui:SetCore("SendNotification", {
+    Title = "noboshit";
+    Text = "Discord.gg/noboline"; -- what the text says (ofc)
+    Duration = 5;
+})
 local Combat = Window:NewTab("Combat")
-
 local CombatSection = Combat:NewSection("General")
 
 CombatSection:NewToggle("killaura", "test", function(state)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "killaura Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
     if state then
         local player = game:GetService("Players")
 local lplr = player.LocalPlayer
@@ -49,21 +57,19 @@ if state then
 	end
 end)
 
-CombatSection:NewButton("AntiAura", "makes it harder to hit you", function()
-    while true do
-        wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 4, 0)
-    end
-end)
-
 local Movement = Window:NewTab("Movement")
 
 local MovementSection = Movement:NewSection("General")
-
-MovementSection:NewKeybind("Fly", "R", Enum.KeyCode.R, function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+MovementSection:NewSlider("Speed", "Speed", 40, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+MovementSection:NewKeybind("OldFly", "R", Enum.KeyCode.R, function()
+	game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "LongJump Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
     wait(0.7)
     game.Workspace.Gravity = 0
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
@@ -96,13 +102,64 @@ MovementSection:NewKeybind("Fly", "R", Enum.KeyCode.R, function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.45           
     wait(1.5)
     game.Workspace.Gravity = 196
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "LongJump Disabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })    
 end)
 
 MovementSection:NewKeybind("Speed", "speeds up", Enum.KeyCode.K, function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
 end)
 
-MovementSection:NewKeybind("Longjump", "longer jump", Enum.KeyCode.J, function()
+
+MovementSection:NewKeybind("LongJump", "Custom longjump made by Wowzers", Enum.KeyCode.J, function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "Better LongJump Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
+	local vec3 = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X + 39, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y + 12, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+local bp = Instance.new('BodyPosition')
+bp.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+bp.Position = vec3
+wait(1)
+bp:remove()
+local bv = Instance.new("BodyVelocity")
+bv.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+bv.Velocity = Vector3.new(0, -25, 0)
+wait(.2)
+
+
+local bpfwd = Instance.new("BodyPosition")
+bpfwd.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+bpfwd.Position = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X + 74, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y + 25, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+bpfwd.P = 10000
+bpfwd.D = 0
+
+wait(.1)
+bv:remove()
+wait(.4)
+bpfwd:remove()
+
+
+local bpfwd = Instance.new('BodyPosition')
+    local vec3 = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X + 39, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y +2, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+bpfwd.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+bpfwd.Position = vec3
+wait(.1)
+bv:remove()
+wait(.4)
+bpfwd:remove()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Noboline";
+    Text = "LongJump Disabled!"; -- what the text says (ofc)
+    Duration = 1;
+})
+end)
+
+MovementSection:NewKeybind("OldLongJump", "longer jump", Enum.KeyCode.B, function()
 	game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
     game.Workspace.Gravity = 15
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0.25
@@ -137,6 +194,11 @@ wait(0.5)
 end)
 
 MovementSection:NewKeybind("HighJump", "jump higher", Enum.KeyCode.H, function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "HighJump Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
 	game.Workspace.Gravity = 15
     wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
@@ -156,16 +218,28 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 2.5, 0)
 wait(1)
 game.Workspace.Gravity = 196
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Noboline";
+    Text = "Highjump Disabled!"; -- what the text says (ofc)
+    Duration = 1;
+})
 end)
 
 MovementSection:NewButton("HeetSeeker(low ping)", "speeds u up", function()
     while true do
-        wait(0.5)
+     	wait(0.5)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
     wait(0.1)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
     end
 end)
+
+MovementSection:NewKeybind("GravityFly", "Uses Gravity to make you fly", Enum.KeyCode.F, function()
+	game.Workspace.Gravity = 1
+	wait(1.5)
+	game.Workspace.Gravity = 196.2
+end)
+
 
 MovementSection:NewButton("HeetSeeker(High Ping)", "speeds u up", function()
     while true do
@@ -175,8 +249,54 @@ MovementSection:NewButton("HeetSeeker(High Ping)", "speeds u up", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
 end)
+MovementSection:NewButton("Infinite Jump", "Jumps inf times", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+MovementSection:NewButton("lagbacker", "lagbacksu", function()
+    _G.WS = "565465465465465464654564564564564564564564545645666666666666666666666665646546464";
+                local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+                Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+                Humanoid.WalkSpeed = _G.WS;
+                end)
+                Humanoid.WalkSpeed = _G.WS;
+end)
+MovementSection:NewButton("Remove antivoid", "Removes antivoid", function()
+    game.Workspace.AntiVoid:remove()
+end)
+MovementSection:NewButton("Antivoid", "antivoid", function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "Antivoid Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
+    local antivoidpart = Instance.new("Part", Workspace)
+            antivoidpart.Name = "AntiVoid"
+            antivoidpart.Size = Vector3.new(2100, 0.5, 2000)
+            antivoidpart.Position = Vector3.new(160.5, 25, 247.5)
+            antivoidpart.Transparency = 0.4
+            antivoidpart.Anchored = true
+            antivoidpart.Touched:connect(function(jumpremote)
+                if jumpremote.Parent:WaitForChild("Humanoid") and jumpremote.Parent.Name == lplr.Name then
+                    game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+                    wait(0.2)
+                    game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+                    wait(0.2)
+                    game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+                end
+            end)
+end)
 
 MovementSection:NewKeybind("DinoExploit", "stuff", Enum.KeyCode.F3, function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Noboline";
+        Text = "DinoExploit Enabled!"; -- what the text says (ofc)
+        Duration = 1;
+    })
 	local args = {
     [1] = "dino_charge"
 }
@@ -580,6 +700,10 @@ MechanicsSection:NewToggle("Low Gravity", "makes gravity low", function(state)
         game.Workspace.Gravity = 196
     end
 end)
+MechanicsSection:NewSlider("FOV Changer", "Changes Field Of View", 120, 70, function(t)
+    game.Workspace.Camera.FieldOfView = t
+end)
+
 
 MechanicsSection:NewToggle("High Gravity", "makes gravity higher", function(state)
     if state then
@@ -628,5 +752,3 @@ end)
 MechanicsSection:NewKeybind("Open GUI", "RightShift", Enum.KeyCode.RightShift, function()
 	Library:ToggleUI()
 end)
-wait(1)
-game.Players.LocalPlayer.Character.Animate.Disabled = true
